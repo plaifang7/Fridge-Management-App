@@ -1,0 +1,10 @@
+<h1>All Fridges</h1>
+<hr>
+<% @fridges.each do |fridge|%>
+<p>
+<%= link_to "#{fridge.brand} - #{fridge.location}", fridge_path(fridge) %>
+</p>
+<% end %>
+<hr>
+
+<button><%= link_to "Add New Fridge", new_fridge_path %></button>
