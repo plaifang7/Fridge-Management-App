@@ -1,6 +1,8 @@
 <h1><%= @fridge.brand %> - <%= @fridge.location %> <a href='/fridges'>back home</a></h1>
 <hr>
 
+<%= button_to "Edit Fridge", edit_fridge_path(@fridge) %>
+<%= button_to "Delete Fridge", @fridge, :method => :delete %>
 <p><strong>Brand:</strong> <%= @fridge.brand %></p>
 <p><strong>Size:</strong> <%= @fridge.size %></p>
 <p><strong>Location:</strong> <%= @fridge.location %></p>
