@@ -1,0 +1,13 @@
+<%= form_for @fridge do |f| %>
+<%= f.label :brand%>
+<%= f.text_field :brand, placeholder: "Brand"%>
+
+<%= f.label :location %>
+<%= f.text_field :location, placeholder: "Location" %>
+
+<%= f.label :size %>
+<%= f.text_field  :size, placeholder: "Size" %>
+
+<%= f.submit "Add Fridge"%>
+
+<% end %>

@@ -4,7 +4,7 @@ class FridgesController < ApplicationController
   end
 
   def show
-    @fridges = Fridge.find(params[:id])
+    @fridge = Fridge.find(params[:id])
   end
 
   def new
