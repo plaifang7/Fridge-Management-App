@@ -1,7 +1,8 @@
-<h1><%= @fridge.brand %> - <%= @fridge.location %> <a href='/fridges'>back home</a></h1>
+<h1><%= @fridge.brand %> - <%= @fridge.location %> <a href='/fridges'><<</a></h1>
 <hr>
-
-<%= button_to "Edit Fridge", edit_fridge_path(@fridge) %>
+<button>
+ <%= link_to "Edit Fridge", edit_fridge_path(@fridge) %>
+</button>
 <%= button_to "Delete Fridge", @fridge, :method => :delete %>
 <p><strong>Brand:</strong> <%= @fridge.brand %></p>
 <p><strong>Size:</strong> <%= @fridge.size %></p>
@@ -9,6 +10,20 @@
 
 <hr>
 <h2>Food</h2>
+<% @foods.each do |food| %>
+<div>
+<p><strong>Food Item:</strong> <%= food.name %> </p>
+<p><strong>Vegan:</strong> <%= food.vegan %> </p>
+</div>
+<% end %>
+
 
 <hr>
 <h2>Drinks</h2>
+<% @drinks.each do |drink| %>
+<div>
+<p><strong>Drink Name:</strong> <%= drink.name %> </p>
+<p><strong>Size:</strong> <%= drink.size %>oz</p>
+<p><strong>Alcoholic:</strong> <%= drink.alcoholic %> </p>
+</div>
+<% end %>
